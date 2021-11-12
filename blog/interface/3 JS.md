@@ -183,7 +183,7 @@ function myInstanceof(instance, obj) {
      - ✅ 如果有，那么将 `object` 转为其原始值 `primitive` 并回到最初重新比较 ♻️
      - ❌ 如果还不是，只能返回 `false` 了
 
-![image-20210824232932567](img/image-20210824232932567.png)
+![image-20210824232932567](https://gitee.com/dadadaxyx/my-images/raw/master/image-20210824232932567.png)
 
 
 
@@ -217,17 +217,17 @@ function myInstanceof(instance, obj) {
 
 例子：
 
-![image-20210824232735702](img/image-20210824232735702.png)
+![image-20210824232735702](https://gitee.com/dadadaxyx/my-images/raw/master/image-20210824232735702.png)
 
 普通的对象，首先调用 valueOf 方法，返回的结果并非原始值，那么会调用 toString 方法
 
-![image-20210824232748839](img/image-20210824232748839.png)
+![image-20210824232748839](https://gitee.com/dadadaxyx/my-images/raw/master/image-20210824232748839.png)
 
 假设我们重写 valueOf 方法，valueOf 和 toString 同时返回 string 原始值。使用 == 操作符可以看出，对象还是优先使用了 valueOf 方法返回的值
 
 数组同理，首先默认调用 valueOf 方法，如不是原始值，则调用 toString 方法
 
-![image-20210824232900614](img/image-20210824232900614.png)
+![image-20210824232900614](https://gitee.com/dadadaxyx/my-images/raw/master/image-20210824232900614.png)
 
 再看看 Date 类型，他的期望类型是 string 因此首先调用的是 toString 方法，该方法返回一个原始值，那么就是用这个原始值
 
@@ -827,7 +827,7 @@ const [a, b, c] = [1, 2, 3]
 
 最终，a、b、c分别被赋予了数组第0、1、2个索引位的值：
 
-<img src="img/image-20210825145812072.png" alt="image-20210825145812072" style="zoom:33%;" />
+<img src="https://gitee.com/dadadaxyx/my-images/raw/master/image-20210825145812072.png" alt="image-20210825145812072" style="zoom:33%;" />
 
 数组里的0、1、2索引位的元素值，精准地被映射到了左侧的第0、1、2个变量里去，这就是数组解构的工作模式。还可以通过给左侧变量数组设置空占位的方式，实现对数组中某几个元素的精准提取：
 
@@ -837,7 +837,7 @@ const [a,,c] = [1,2,3]
 
 通过把中间位留空，可以顺利地把数组第一位和最后一位的值赋给 a、c 两个变量：
 
-<img src="img/image-20210825145832136.png" alt="image-20210825145832136" style="zoom:33%;" />
+<img src="https://gitee.com/dadadaxyx/my-images/raw/master/image-20210825145832136.png" alt="image-20210825145832136" style="zoom:33%;" />
 
 **2）对象的解构**
 
@@ -858,7 +858,7 @@ const { name, age } = stu
 
 这样就得到了 name 和 age 两个和 stu 平级的变量：
 
-<img src="img/image-20210825145900756.png" alt="image-20210825145900756" style="zoom:33%;" />
+<img src="https://gitee.com/dadadaxyx/my-images/raw/master/image-20210825145900756.png" alt="image-20210825145900756" style="zoom:33%;" />
 
 注意，对象解构严格以属性名作为定位依据，所以就算调换了 name 和 age 的位置，结果也是一样的：
 
@@ -1961,7 +1961,7 @@ function f(x) {
 
 我们知道，函数调用会在内存形成一个"调用记录"，又称"调用帧"（call frame），保存调用位置和内部变量等信息。如果在函数A的内部调用函数B，那么在A的调用记录上方，还会形成一个B的调用记录。等到B运行结束，将结果返回到A，B的调用记录才会消失。如果函数B内部还调用函数C，那就还有一个C的调用记录栈，以此类推。所有的调用记录，就形成一个["调用栈"](https://zh.wikipedia.org/wiki/调用栈)（call stack）。
 
-![image-20210825181914707](img/image-20210825181914707.png)
+![image-20210825181914707](https://gitee.com/dadadaxyx/my-images/raw/master/image-20210825181914707.png)
 
 尾调用由于是函数的最后一步操作，所以不需要保留外层函数的调用记录，因为调用位置、内部变量等信息都不会再用到了，只要直接用内层函数的调用记录，取代外层函数的调用记录就可以了。
 
@@ -2480,7 +2480,7 @@ console.log(x)
 - 变量对象VO（Variable Object）：存放当前执行上下文中创建的变量和值
 - 活动对象AO（Activation Object）：函数私有上下文中的变量对象
 
-![didi](img/didi.gif)
+![didi](https://gitee.com/dadadaxyx/my-images/raw/master/didi.gif)
 
 #### 2. 全局代码执行
 
@@ -2498,7 +2498,7 @@ js在解析这段代码时，会按照以下3个步骤
 
 当创建的值是引用类型时，会在堆内存中开辟新的内存空间用来保存值，创建完成后，会将堆内存地址（通常是16进制）保存到栈内存中；如果创建的值是基本类型时，会直接保存到栈内存中
 
-![4e1b6d3897174cd38bbdb61c2aaaa310_tplv-k3u1fbpfcp-zoom-1](img/4e1b6d3897174cd38bbdb61c2aaaa310_tplv-k3u1fbpfcp-zoom-1.gif)
+![didi1](https://gitee.com/dadadaxyx/my-images/raw/master/didi1.gif)
 
 继续向下执行
 
@@ -2512,7 +2512,7 @@ function fn(y) {
 
 函数也是属于引用类型，也需要开辟堆内存空间进行保存，不同于数组和对象保存的是键值对，JS会将函数体通过字符串包裹进行保存，同时也会保存函数相关的属性，例如 **函数名 name:fn、形参个数length:1**等。同时，更重要的是，创建函数的时候，就定义了 **函数的作用域**，也就是 **等于当前创建函数的执行上下文**。在这个例子中，函数fn的作用域就是全局执行上下文，标识为 `[[scope]]:EC(G)`
 
-![ad310ce9d16f41dea92186d788703feb_tplv-k3u1fbpfcp-zoom-1](img/ad310ce9d16f41dea92186d788703feb_tplv-k3u1fbpfcp-zoom-1.gif)
+![ad310ce9d16f41dea92186d788703feb_tplv-k3u1fbpfcp-zoom-1](https://gitee.com/dadadaxyx/my-images/raw/master/ad310ce9d16f41dea92186d788703feb_tplv-k3u1fbpfcp-zoom-1.gif)
 
 在函数创建好后，继续向下执行
 
@@ -2525,7 +2525,7 @@ fn(x)
 - **每次函数执行**，都会创建一个 **函数私有执行上下文**，创建完之后，需要进入到栈内存中去执行，此时，执行栈中的 **全局执行上下文就会被压入到栈底（压栈）**
 - 同时，需要创建一个 **活动对象AO** 存放当前函数执行上下文中创建的变量和值等
 
-![4ee58aabd027402f91c98c4ebc490c40_tplv-k3u1fbpfcp-zoom-1](img/4ee58aabd027402f91c98c4ebc490c40_tplv-k3u1fbpfcp-zoom-1.gif)
+![4ee58aabd027402f91c98c4ebc490c40_tplv-k3u1fbpfcp-zoom-1](https://gitee.com/dadadaxyx/my-images/raw/master/4ee58aabd027402f91c98c4ebc490c40_tplv-k3u1fbpfcp-zoom-1.gif)
 
 再完成函数执行上下文入栈后，接下来会做以下几件事
 
@@ -2535,7 +2535,7 @@ fn(x)
 4. **形参赋值** y = x = AAAFFF111
 5. **执行函数体** 紧接着就是执行函数体内容，在执行完后，当前函数的执行上下文就会出栈，退出执行栈，而被压入栈底的全局执行上下文又被推到了栈顶，此时会继续执行全局上下文中的代码
 
-![624fc0122f3040d5adbcd0e6913a620d_tplv-k3u1fbpfcp-zoom-1](img/624fc0122f3040d5adbcd0e6913a620d_tplv-k3u1fbpfcp-zoom-1.gif)
+![624fc0122f3040d5adbcd0e6913a620d_tplv-k3u1fbpfcp-zoom-1](https://gitee.com/dadadaxyx/my-images/raw/master/624fc0122f3040d5adbcd0e6913a620d_tplv-k3u1fbpfcp-zoom-1.gif)
 
 至此，代码执行结束，最终输出的x是 [100, 23]
 
@@ -2549,7 +2549,7 @@ fn(x)
 
 由对象的原型、以及该对象的原型的原型，以此类推，组成的关系链叫做**原型链**。
 
-![image-20210825234828887](img/image-20210825234828887.png)
+![image-20210825234828887](https://gitee.com/dadadaxyx/my-images/raw/master/image-20210825234828887.png)
 
 **总结：**
 
@@ -3035,7 +3035,7 @@ async function func1() {
 console.log(func1())
 ```
 
-![image-20210826221653750](img/image-20210826221653750.png)
+![image-20210826221653750](https://gitee.com/dadadaxyx/my-images/raw/master/image-20210826221653750.png)
 
 func1的运行结果其实就是一个Promise对象。因此也可以使用then来处理后续逻辑。
 
@@ -3370,7 +3370,7 @@ let result = testAsy();
 console.log(result)
 ```
 
-![image-20210826230550033](img/image-20210826230550033.png)
+![image-20210826230550033](https://gitee.com/dadadaxyx/my-images/raw/master/image-20210826230550033.png)
 
 所以，async 函数返回的是一个 Promise 对象。async 函数（包含函数语句、函数表达式、Lambda表达式）会返回一个 Promise 对象，如果在函数中 `return` 一个直接量，async 会把这个直接量通过 `Promise.resolve()` 封装成 Promise 对象。
 
@@ -3424,7 +3424,7 @@ async function test() {
 test();
 ```
 
-![image-20210826231603761](img/image-20210826231603761.png)
+![image-20210826231603761](https://gitee.com/dadadaxyx/my-images/raw/master/image-20210826231603761.png)
 
 await 表达式的运算结果取决于它等的是什么。
 
@@ -3452,7 +3452,7 @@ testAwt();
 console.log('cug')  //立即输出cug
 ```
 
-![image-20210826231657648](img/image-20210826231657648.png)
+![image-20210826231657648](https://gitee.com/dadadaxyx/my-images/raw/master/image-20210826231657648.png)
 
 这就是 await 必须用在 async 函数中的原因。async 函数调用不会造成阻塞，它内部所有的阻塞都被封装在一个 Promise 对象中异步执行。await暂停当前async的执行，所以'cug''最先输出，hello world'和‘cuger’是3秒钟后同时出现的。
 
@@ -3770,7 +3770,7 @@ instance1.colors.push("black")
 console.log(instance2)
 ```
 
-![image-20210827143014147](img/image-20210827143014147.png)
+![image-20210827143014147](https://gitee.com/dadadaxyx/my-images/raw/master/image-20210827143014147.png)
 
 
 
@@ -3803,7 +3803,7 @@ let instance = new SubType("dididi")
 console.log(instance)
 ```
 
-![image-20210120130645749](img/image-20210120130645749.png)
+![image-20210120130645749](https://gitee.com/dadadaxyx/my-images/raw/master/image-20210120130645749.png)
 
 
 
@@ -3845,7 +3845,7 @@ console.log(instance)
 console.log(instance1)
 ```
 
-![image-20210120141134782](img/image-20210120141134782.png)
+![image-20210120141134782](https://gitee.com/dadadaxyx/my-images/raw/master/image-20210120141134782.png)
 
 
 
@@ -3880,7 +3880,7 @@ let anotherPerson = Object.create(person, {
 console.log(anotherPerson)
 ```
 
-![image-20210120142615772](img/image-20210120142615772.png)
+![image-20210120142615772](https://gitee.com/dadadaxyx/my-images/raw/master/image-20210120142615772.png)
 
 
 
@@ -3940,7 +3940,7 @@ console.log(instance)
 console.log(instance1)
 ```
 
-![image-20210120143726975](img/image-20210120143726975.png)
+![image-20210120143726975](https://gitee.com/dadadaxyx/my-images/raw/master/image-20210120143726975.png)
 
 
 

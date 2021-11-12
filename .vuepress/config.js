@@ -36,13 +36,13 @@ module.exports = {
         separator: "-", // Separator of the slug, default: '-'
       },
     ],
-    // 趣味动态表i
+    // 趣味动态表
     [
       "dynamic-title",
       {
-        showIcon: "/favicon.ico",
+        showIcon: "/zyhblog/favicon.ico",
         showText: "Hello ~",
-        hideIcon: "/failure.ico",
+        hideIcon: "/zyhblog/favicon.ico",
         hideText: "ByeBye ~",
         recoverTime: 2000
       }

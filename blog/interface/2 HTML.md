@@ -115,7 +115,7 @@ DOCTYPE（文档类型），向 HTML 文档添加`<!DOCTYPE>`声明，告知浏�
 
 # 5. script 标签中 async 和 defer 的区别
 
-![image-20210822101429717](img/image-20210822101429717.jpg)
+![image-20210822101429717](https://gitee.com/dadadaxyx/my-images/raw/master/image-20210822101429717.jpg)
 
 蓝色线代表网络读取，红色线代表执行时间，这俩都是针对脚本的；绿色线代表 HTML 解析。
 
@@ -350,7 +350,7 @@ iframe 元素会创建包含另外一个文档的内联框架（即行内框架�
 
 下载是并行的，执行是先后的，以这种方式触发的下载请求称为“预测”，因为很可能脚本还会改变 html 结构，导致预测的浪费（即下载的脚本是无效的，并不会被执行），但这并不常见，所以预解析仍然可以带来很大的性能提升。
 
-![image-20210824161905130](img/image-20210824161905130.png)
+![image-20210824161905130](https://gitee.com/dadadaxyx/my-images/raw/master/image-20210824161905130.png)
 
 - 预加载的内容：
   - 脚本 `<script>`
@@ -387,7 +387,7 @@ iframe 元素会创建包含另外一个文档的内联框架（即行内框架�
 
     - FOUC - Flash of Unstyled Content: 没有任何样式的页面突然变换成了有样式的。
 
-      ![image-20210824162436361](img/image-20210824162436361.png)
+      ![image-20210824162436361](https://gitee.com/dadadaxyx/my-images/raw/master/image-20210824162436361.png)
 
 推荐好文：
 
